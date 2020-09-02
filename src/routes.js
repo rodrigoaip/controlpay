@@ -8,6 +8,6 @@ routes.get('/', (request, response) => {
 } );
 
 routes.post('/callback', CallBack.create);
-routes.post('/search/:pedidoReferencia', CallBack.search);
+routes.post('/search/:intencaoVendaId', CallBack.search);
 
 module.exports = routes;
