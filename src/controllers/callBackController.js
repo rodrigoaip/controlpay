@@ -4,8 +4,14 @@ const { search } = require('../routes');
 module.exports = {
     async create(request, response) {
        const {cpfCnpj, intencaoVendaId, intencaoVendaReferencia, pedidoId, pedidoReferencia} = request.query; 
+       
+       const { b } = request.body;
 
         console.log(request.query);
+
+        console.log( b );
+
+        
 
        const [id] = await connection('vendas')
             .returning('id')
