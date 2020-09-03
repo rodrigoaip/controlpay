@@ -23,14 +23,14 @@ module.exports = {
     },
 
     async search(request, response) {
-        const { intencaoVendaId } = request.params;
+        const { intencaoVendaId } = request.query;
 
 
         const dados = await connection('vendas')
             .where('intencaoVendaId', intencaoVendaId)
             .select('*');
 
-            
+
         return response.json(dados);
 
     }

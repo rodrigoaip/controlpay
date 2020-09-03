@@ -9,7 +9,7 @@ routes.get('/', (request, response) => {
 
 
 routes.post('/callback', CallBack.create);
-routes.post('/search/:intencaoVendaId', CallBack.search);
+routes.get('/search', CallBack.search);
 
 
 module.exports = routes;
