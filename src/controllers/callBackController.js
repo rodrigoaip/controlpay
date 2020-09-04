@@ -28,7 +28,8 @@ module.exports = {
 
         const dados = await connection('vendas')
             .where('intencaoVendaId', intencaoVendaId)
-            .select('*');
+            .select('*')
+            .orderby('id', 'desc');
 
 
         return response.json(dados);
